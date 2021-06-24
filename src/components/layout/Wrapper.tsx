@@ -10,7 +10,7 @@ type Props = {
 
 const Wrapper = ({ className, children }: Props) => {
   return (
-    <div className={cn(className, 'max-w-screen-xl mx-auto')}>
+    <div className={cn(className, 'mx-4 max-w-screen-xl xl:mx-auto')}>
       {children}
     </div>
   )
