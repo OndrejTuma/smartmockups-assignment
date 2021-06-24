@@ -8,17 +8,18 @@ import useMockups from '../hooks/useMockups'
 import Wrapper from '@components/layout/Wrapper'
 import DataPresenter from '@components/core/DataPresenter'
 import Mockups, { Mockup } from '../components/Mockups'
+import MockupsSkeleton from '../components/MockupsSkeleton'
 
 const MockupsContainer = () => {
   const dispatch = useDispatch()
   const query = useMockups({
-    onSuccess: (data: Array<Mockup>) => dispatch(setMockupList(data))
+    onSuccess: (data: Array<Mockup>) => dispatch(setMockupList(data)),
   })
   const mockups = useSelector(getFilteredMockupList)
 
   return (
     <Wrapper>
-      <DataPresenter query={query}>
+      <DataPresenter query={query} loader={<MockupsSkeleton/>}>
         <Mockups mockups={mockups}/>
       </DataPresenter>
     </Wrapper>

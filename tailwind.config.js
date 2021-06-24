@@ -4,11 +4,10 @@ module.exports = {
   theme: {
     colors: {
       primary: '#000000',
-      secondary: '#11BEFF',
-      dark: '#111111E5',
-      light: '#E1E1E1',
-      gray: '#4A4A4A',
-      white: '#FFFFFF',
+      secondary: '#11beff',
+      light: '#e1e1e1',
+      gray: '#4a4a4a',
+      white: '#ffffff',
     },
     fontFamily: {
       primary: ['Montserrat', 'sans-serif'],

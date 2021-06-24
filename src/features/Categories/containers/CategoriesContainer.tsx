@@ -10,6 +10,7 @@ import flattenCategories from '../utils/flattenCategories'
 import Wrapper from '@components/layout/Wrapper'
 import DataPresenter from '@components/core/DataPresenter'
 import Categories, { FilterCategory, SetActiveCategoryFactory } from '../components/Categories'
+import CategoriesSkeleton from '../components/CategoriesSkeleton'
 
 const CategoriesContainer = () => {
   const dispatch = useDispatch()
@@ -37,7 +38,7 @@ const CategoriesContainer = () => {
 
   return (
     <Wrapper className={'border border-light box-content rounded py-6 mt-14 mb-7'}>
-      <DataPresenter query={query}>
+      <DataPresenter query={query} loader={<CategoriesSkeleton/>}>
         <Categories
           activeCategory={activeCategory}
           categories={categories}
